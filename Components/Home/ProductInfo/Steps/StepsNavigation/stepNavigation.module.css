@@ -1,0 +1,44 @@
+
+.circle{
+    width: 29px;
+    height: 29px;
+    /* line-height: 25px; */
+    background-color: green;
+    border-radius: 50%;
+    border: 2px solid transparent
+}
+.stepWrapper{
+    display: flex;
+}
+
+.stepBlock .stepWrapper{
+    padding: 0 20px;
+}
+
+.selected .circle{
+    color: black;
+    background-color: white;
+    border-color: green;
+}
+
+
+.circleWrapper::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    top: 0;
+    bottom: 0; 
+    background-color: lightblue;
+    margin: auto;
+    z-index: -1;
+}
+
+
+/* .stepBlock:not(:last-child) > .circleWrapper::after {
+    height: 2px;
+}
+
+.stepBlock:not(:last-child).selected ~ .circleWrapper::after {
+    height: 3px;
+} */
